@@ -1,0 +1,83 @@
+<p-card>
+
+    <form [formGroup]="promotionForm">
+        <div class="form-grid">
+
+        <div class="field">
+            <label>Promotion Name</label>
+            <input
+                id="name"
+                pInputText
+                formControlName="name"
+                placeholder="Enter promotion name">
+        </div>
+
+        <div class="field">
+            <label>Discount Type</label>
+            <p-select
+                [options]="discountTypes"
+                formControlName="discountType">
+            </p-select>
+        </div>
+
+        <div class="field">
+            <label>Discount Value</label>
+
+            <p-inputNumber
+                formControlName="discountValue">
+            </p-inputNumber>
+        </div>
+
+        <div class="field">
+            <label>Application Scope</label>
+
+            <p-select
+                [options]="applicationScopes"
+                formControlName="applicationScope">
+            </p-select>
+        </div>
+
+        <div class="field">
+            <label>Start Date</label>
+
+            <p-datepicker
+                formControlName="startDate">
+            </p-datepicker>
+        </div>
+
+        <div class="field">
+            <label>End Date</label>
+
+            <p-datepicker
+                formControlName="endDate">
+            </p-datepicker>
+        </div>
+
+        <div class="field">
+            <label>Status</label>
+
+            <p-select
+                [options]="statuses"
+                formControlName="promotionStatus">
+            </p-select>
+        </div>
+    </div>
+
+        <div class="actions">
+
+            <p-button
+                label="Save"
+                icon="pi pi-check"
+                (onClick)="save()">
+            </p-button>
+
+            <p-button
+                label="Cancel"
+                severity="secondary">
+            </p-button>
+
+        </div>
+
+    </form>
+
+</p-card>
